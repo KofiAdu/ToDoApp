@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model TodoList
+@{
+ViewData["Title"] = "Edit";
+}
+
+<form method="post">
+    <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" asp-for="Title" placeholder="Title"/>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+         <textarea class="form-control" asp-for="Description" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Date Edited</label>
+        <input type="datetime-local" asp-for="UpdatedDate" readonly/>
+    </div>
+    <br />
+   <button type="submit">Edit Item</button>
+   <a asp-action="Index">Back to List</a>
+</form>
+
+
